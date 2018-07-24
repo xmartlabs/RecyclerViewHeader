@@ -364,6 +364,16 @@ public class RecyclerViewHeader extends RelativeLayout {
             if (linear != null) {
                 return 1;
             } else if (grid != null) {
+                GridLayoutManager.SpanSizeLookup lookup = grid.getSpanSizeLookup();
+                if (lookup != null) {
+                    float firstSpanSize = 0;
+                    for (int position = 0; ; position++) {
+                        firstSpanSize += (float) lookup.getSpanSize(position) / (float) grid.getSpanCount();
+                        if (firstSpanSize >= 1) {
+                            return position + 1;
+                        }
+                    }
+                }
                 return grid.getSpanCount();
 //            } else if (staggeredGrid != null) {
 //                return staggeredGrid.getSpanCount(); //TODO: 05.04.2016 implement staggered
