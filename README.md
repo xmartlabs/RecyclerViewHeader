@@ -9,6 +9,8 @@ Super fast and easy way to create header for Android `RecyclerView`.
 
 Lets you create header `View` for any `RecyclerView` that uses `LinearLayoutManager` or `GridLayoutManager` with just a simple method call.
 
+Forked from: [blipinsk/RecyclerViewHeader](https://github.com/blipinsk/RecyclerViewHeader)
+
 ![ ](/RecyclerViewHeader.png)
 
 Limitations
